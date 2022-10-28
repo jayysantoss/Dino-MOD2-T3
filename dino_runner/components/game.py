@@ -128,8 +128,13 @@ class Game:
             draw_message_component(
                 f'SUA PONTUAÇÃO: {self.score}',
                 self.screen,
-                pos_y_center=half_screen_height -100 ##posição
-            )
+                pos_y_center=half_screen_height -150 ##posição
+                 )
+            draw_message_component(
+                f"Death count: {self.death_count}",
+                self.screen,
+                pos_y_center=half_screen_height - 100
+                )
             self.screen.blit(ICON, (half_screen_width -40, half_screen_height -30))
 
         pygame.display.flip()
